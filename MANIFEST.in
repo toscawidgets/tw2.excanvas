@@ -1,0 +1,2 @@
+recursive-include tw2/excanvas/static *
+include README.rst
