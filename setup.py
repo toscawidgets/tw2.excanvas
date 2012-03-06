@@ -6,7 +6,7 @@ setup(
     description='toscawidgets2 wrapper for excanvas.js resource',
     long_description='',
     author='Ralph Bean',
-    author_email='ralph.bean@gmail.com',
+    author_email='rbean@redhat.com',
     license='MIT',
     url='http://github.com/toscawidgets/tw2.excanvas',
     install_requires=[
