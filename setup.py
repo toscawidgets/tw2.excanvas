@@ -8,7 +8,7 @@ setup(
     author='Ralph Bean',
     author_email='ralph.bean@gmail.com',
     license='MIT',
-    url='http://github.com/ralphbean/tw2.excanvas',
+    url='http://github.com/toscawidgets/tw2.excanvas',
     install_requires=[
         "tw2.core>=2.0b2",
         ],
