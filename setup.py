@@ -1,8 +1,13 @@
 from setuptools import setup, find_packages
 
+try:
+    import multiprocessing, logging
+except Exception:
+    pass
+
 setup(
     name='tw2.excanvas',
-    version='2.0a1',
+    version='2.0.0',
     description='toscawidgets2 wrapper for excanvas.js resource',
     long_description='',
     author='Ralph Bean',
@@ -11,13 +16,14 @@ setup(
     url='http://github.com/toscawidgets/tw2.excanvas',
     install_requires=[
         "tw2.core>=2.0b2",
+        "tw2.forms",
         ],
-    packages=find_packages(exclude=['ez_setup', 'tests']),
+    tests_require = ['nose', 'BeautifulSoup', 'genshi'],
+    packages=['tw2', 'tw2.excanvas'],
     namespace_packages = ['tw2'],
     zip_safe=False,
     include_package_data=True,
     test_suite = 'nose.collector',
-    tests_require = ['nose', 'BeautifulSoup', 'genshi'],
     entry_points="""
         [tw2.widgets]
         # Register your widgets so they can be listed in the WidgetBrowser
@@ -27,7 +33,7 @@ setup(
         'toscawidgets.widgets',
     ],
     classifiers = [
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Environment :: Web Environment :: ToscaWidgets',
         'Topic :: Software Development :: Libraries :: Python Modules',
