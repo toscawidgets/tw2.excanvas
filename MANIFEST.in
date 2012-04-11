@@ -1,2 +1,3 @@
-recursive-include tw2/excanvas/static *
 include README.rst
+recursive-include tw2/excanvas/static *
+recursive-include tests *.py
