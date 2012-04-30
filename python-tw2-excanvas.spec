@@ -4,14 +4,13 @@
 
 Name:           python-tw2-excanvas
 Version:        2.0.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Excanvas for ToscaWidgets2
 
 Group:          Development/Languages
 License:        MIT
 URL:            http://toscawidgets.org
 Source0:        http://pypi.python.org/packages/source/t/%{modname}/%{modname}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
 # For building
@@ -37,21 +36,21 @@ Simple excanvas resource wrapper for ToscaWidgets2.
 %{__python} setup.py build
 
 %install
-rm -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build \
     --install-data=%{_datadir} --root %{buildroot}
 
 %check
 PYTHONPATH=$(pwd) python setup.py test
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc README.rst
 %{python_sitelib}/*
 
 %changelog
+* Mon Apr 30 2012 Ralph Bean <rbean@redhat.com> - 2.0.0-2
+- Removed clean section
+- Removed defattr in files section
+- Removed unnecessary references to buildroot
+
 * Wed Apr 11 2012 Ralph Bean <rbean@redhat.com> - 2.0.0-1
 - Initial packaging for Fedora
