@@ -7,7 +7,7 @@ except Exception:
 
 setup(
     name='tw2.excanvas',
-    version='2.0.0',
+    version='2.0.1',
     description='toscawidgets2 wrapper for excanvas.js resource',
     long_description='',
     author='Ralph Bean',

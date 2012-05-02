@@ -3,8 +3,8 @@
 %global modname tw2.excanvas
 
 Name:           python-tw2-excanvas
-Version:        2.0.0
-Release:        2%{?dist}
+Version:        2.0.1
+Release:        1%{?dist}
 Summary:        Excanvas for ToscaWidgets2
 
 Group:          Development/Languages
@@ -43,10 +43,13 @@ Simple excanvas resource wrapper for ToscaWidgets2.
 PYTHONPATH=$(pwd) python setup.py test
 
 %files
-%doc README.rst
+%doc README.rst LICENSE
 %{python_sitelib}/*
 
 %changelog
+* Wed May 02 2012 Ralph Bean <rbean@redhat.com> - 2.0.1-1
+- Upstream release, includes proper LICENSE file.
+
 * Mon Apr 30 2012 Ralph Bean <rbean@redhat.com> - 2.0.0-2
 - Removed clean section
 - Removed defattr in files section
