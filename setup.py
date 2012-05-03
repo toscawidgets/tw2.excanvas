@@ -7,7 +7,7 @@ except Exception:
 
 setup(
     name='tw2.excanvas',
-    version='2.0.1',
+    version='2.0.2',
     description='toscawidgets2 wrapper for excanvas.js resource',
     long_description='',
     author='Ralph Bean',
@@ -16,7 +16,6 @@ setup(
     url='http://github.com/toscawidgets/tw2.excanvas',
     install_requires=[
         "tw2.core>=2.0b2",
-        "tw2.forms",
         ],
     tests_require = ['nose', 'BeautifulSoup', 'genshi'],
     packages=['tw2', 'tw2.excanvas'],
