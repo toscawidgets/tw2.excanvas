@@ -3,7 +3,7 @@
 %global modname tw2.excanvas
 
 Name:           python-tw2-excanvas
-Version:        2.0.1
+Version:        2.0.2
 Release:        1%{?dist}
 Summary:        Excanvas for ToscaWidgets2
 
@@ -47,6 +47,9 @@ PYTHONPATH=$(pwd) python setup.py test
 %{python_sitelib}/*
 
 %changelog
+* Thu May 03 2012 Ralph Bean <rbean@redhat.com> - 2.0.2-1
+- Upstream release, removes spurious dependency on tw2.forms.
+
 * Wed May 02 2012 Ralph Bean <rbean@redhat.com> - 2.0.1-1
 - Upstream release, includes proper LICENSE file.
 
